@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"charset="utf-8">
+  <link  href="font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styleExpediente.css" charset="utf-8">
+  <script   src="https://code.jquery.com/jquery-2.2.4.js"></script>
+  <script type="text/javascript" src="scriptExpediente.js"></script>
+  <script type="text/javascript" src="ListarExpedientes.js"></script>
+
+
+
+
+</head>
+<body>
+  <div class="container">
+    <center><label><h1>Expedientes</h1></label></center><br>
+    <section class="content center-block">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="input-group pull-left">
+            <button type="button" name="button" class="btn btn-primary">Crear Nuevo Expediente <span class="glyphicon glyphicon-plus"></span></button>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="input-group pull-right">
+            <input type="text" class="form-control" placeholder="Buscar Expediente">
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-search"></span>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="pull-right">
+            <ul class="list-inline">
+              <li class="btn btn-success" onclick="activos()">Activos</li>
+              <li class="btn btn-warning" onclick="inactivos()">Terminados</li>
+              <li class="btn btn-danger" onclick="cancelados()">Cancelados</li>
+              <li class="btn btn-default"  onclick="todos()">Todos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 pull-left table-responsive">
+          <table class="table table-hover table-striped " name ="Expedientes" id="Expedientes">
+            <thead>
+              <tr>
+                <th>Informante</th>
+                <th>Aprendiz</th>
+                <th>Recepción Documento</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody name="datos" id="datos">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <script type="text/javascript" src="tableExpediente.js"></script>
+  <script type="text/javascript" src="jquery.tablesorter.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+  </script>
+</body>
+</html>
